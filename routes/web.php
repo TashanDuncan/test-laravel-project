@@ -28,7 +28,7 @@ Route::get('test', function () {
     ];
 
     if (! array_key_exists($post, $posts)) {
-        abort(403, 'sorry bruh');
+        abort(403, 'sorry bro');
     };
 
     return view('post', [
@@ -38,3 +38,4 @@ Route::get('test', function () {
 */
 
 Route::get('/posts/{post}', 'PostsController@show');
+Route::get('/tickets/{ticket}', 'ticketsController@show');
