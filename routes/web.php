@@ -39,3 +39,4 @@ Route::get('test', function () {
 
 Route::get('/posts/{post}', 'PostsController@show');
 Route::get('/tickets/{ticket}', 'ticketsController@show');
+
