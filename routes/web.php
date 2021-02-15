@@ -14,10 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome');
+Route::view('/welcome2', 'welcome2');
+Route::view('/about', 'about');
 
 Route::get('test', function () {
    return view('test', ['name' => request('name')]);
 });
+
+
 
 /*Route::get('/posts/{post}', function ($post) {
     $posts = [
@@ -36,5 +40,6 @@ Route::get('test', function () {
 */
 
 Route::get('/posts/{post}', 'PostsController@show');
+Route::get('/tickets/{ticket}', 'ticketController@show');
 Route::get('/tickets/{ticket}', 'ticketController@show');
 
