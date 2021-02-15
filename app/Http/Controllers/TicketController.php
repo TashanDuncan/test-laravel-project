@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Tickets;
+use App\Ticket;
 
-class TicketsController extends Controller
+class TicketController extends Controller
 {
     public function show($id)
     {
         return view('ticket', [
-            'ticket' => Tickets::where('id', $id)->firstOrFail()
+            'ticket' => Ticket::where('id', $id)->firstOrFail()
         ]);
     }
 }

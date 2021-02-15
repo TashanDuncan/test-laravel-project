@@ -21,7 +21,7 @@ class PostsController extends Controller
 
 
         if (! array_key_exists($post, $posts)) {
-            abort(403, 'sorry bruh');
+            abort(403, 'sorry bro');
         };
         */
 

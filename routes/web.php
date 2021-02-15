@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
 
 Route::get('test', function () {
    return view('test', ['name' => request('name')]);
@@ -38,5 +36,5 @@ Route::get('test', function () {
 */
 
 Route::get('/posts/{post}', 'PostsController@show');
-Route::get('/tickets/{ticket}', 'ticketsController@show');
+Route::get('/tickets/{ticket}', 'ticketController@show');
 
