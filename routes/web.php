@@ -46,7 +46,20 @@ Route::get('/tickets/{ticket}', 'ticketController@show');
 
 Route::get('/about', function (){
     return view('about', [
-        'articles' => App\article::take(3)->latest()->get()
+        'articles' => App\Article::take(3)->latest()->get()
     ]);
 }) ;
 
+/*Route::get('/articles/', function (){
+    return view('articles', [
+        'articles' => App\article::paginate(5)
+    ]);
+}) ;
+*/
+
+Route::get('/articles', 'ArticlesController@index');
+Route::post('/articles', 'ArticlesController@store');
+Route::get('/articles/create', 'ArticlesController@create');
+Route::get('/articles/{article}', 'ArticlesController@show');
+Route::get('/articles/{article}/edit', 'ArticlesController@edit');
+Route::put('/articles/{article}', 'ArticlesController@update');
